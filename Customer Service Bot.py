@@ -3,27 +3,27 @@ def greeting():
     print(f'Thanks, {name}!')
     return
 
-def select_catagory():
-    catagory = input('What are you inquiring about today? Enter "1" for Store location and hours. "2" for Order Status,' \
+def select_category():
+    category = input('What are you inquiring about today? Enter "1" for Store location and hours. "2" for Order Status,' \
         '"3" for Issue with order, "4" for Design Services, and "5" for other. ')
-    #Create a list of functions that can be created later for each catagory 
-    if catagory == '1':
+    #Create a list of functions that can be created later for each category 
+    if category == '1':
         store_location_hours()
         return
 
-    if catagory == '2':
+    if category == '2':
         order_status()
         return
 
-    if catagory == '3':
+    if category == '3':
         order_issue()
         return
 
-    if catagory == '4':
+    if category == '4':
         design_services()
         return
 
-    if catagory == '5':
+    if category == '5':
         other()
         return
 #All you have to do now is to define each function
@@ -33,7 +33,7 @@ def store_location_hours():
     print(f'Tiny space is located at {location}. The store is open from {hours}.')
     addition_comments = input('May I help you with anything else [yes/no] ').lower()
     if addition_comments == 'yes':
-        select_catagory()
+        select_category()
     elif addition_comments == 'no':
         print('Thank you for contacting Tiny Space!')
     return
@@ -78,4 +78,4 @@ def transfer_Trinity():
     return
 
 greeting()
-select_catagory()
+select_category()
